@@ -1,0 +1,281 @@
+/*-------- Token --------*/
+
+.token {
+    padding: 130px 0;
+    background-image: url(../../images/token/bg.svg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__column {
+        width: 40%;
+    }
+
+    &__title {
+        width: 100%;
+        text-align: left;
+    }
+
+    &__text {
+        line-height: 1.5;
+    }
+
+    &__text--1 {
+        margin-top: 32px;
+    }
+
+    &__text--2 {
+        margin-top: 20px;
+        font-family: $font-b;
+    }
+
+    &__chart-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: calc(60% - 140px);
+        padding: 58px;
+        margin-left: 140px;
+
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+
+        position: relative;
+    }
+
+    &__chart {
+        overflow: visible;
+    }
+
+    &__chart-label {
+        display: flex;
+        justify-content: center;
+
+        padding: 2px 3px;
+
+        font-family: $font-b;
+        font-size: 3px;
+        color: $green;
+        text-align: center;
+
+        background-color: #0c0d3d;
+        border-radius: 12px;
+
+        position: relative;
+
+        pointer-events: none;
+    }
+
+    &__chart-label:before {
+        content: "";
+        width: 5px;
+        height: 5px;
+
+        background-color: #0c0d3d;
+        border-radius: 1px;
+
+        position: absolute;
+        top: calc(100% - 4px);
+        transform: rotateZ(45deg);
+    }
+
+    &__chart-label span {
+        z-index: 2;
+    }
+
+    &__chart-text {
+        position: absolute;
+        font-family: $font-round;
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    &__image {
+        width: 53%;
+
+        position: absolute;
+        top: 30.5%;
+        left: 23%;
+
+        z-index: 1;
+    }
+
+    &__labels {
+        margin-top: 32px;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__label:before {
+        content: "";
+
+        width: 48px;
+        height: 3px;
+
+        background-color: currentColor;
+
+        transition: filter 0.3s ease-out,
+    }
+
+    &__label.active:before {
+        filter: brightness(120%);
+    }
+
+    &__label.active &__label-title {
+        text-decoration: underline;
+    }
+
+    &__label:not(:first-child) {
+        margin-top: 16px;
+    }
+
+    &__label-title {
+        margin-left: 12px;
+        font-family: $font-b;
+        color: $black;
+    }
+
+    &__label-title span {
+        font-family: $font-r;
+    }
+}
+
+@media (max-width: 989px) {
+
+    .token {
+
+        &__list {
+            width: 52%;
+        }
+
+        &__chart-wrapper {
+            width: calc(48% - 30px);
+            margin-left: 30px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .token {
+        padding: 60px 0;
+
+        &__list {
+            width: 100%;
+        }
+
+        &__chart-wrapper {
+            width: 100%;
+            max-width: 348px;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+
+        &__labels {
+            margin-top: 30px;
+        }
+
+        &__desc-wrapper {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+
+        &__label:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        &__label-column {
+            margin-left: 10px;
+        }
+
+        &__label:before {
+            width: 16px;
+            height: 16px;
+        }
+
+        &__label-title {
+            font-size: 16px;
+        }
+
+        &__label-value {
+            margin-top: 4px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .token {
+        overflow: hidden;
+
+        &__labels {
+            flex-wrap: wrap;
+
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__label {
+            width: 48%;
+        }
+
+        &__label:not(:first-child) {
+            margin-left: 0;
+        }
+
+        &__label:nth-child(n+3) {
+            margin-top: 10px;
+        }
+
+        &__background {
+            width: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .token {
+
+        &__item-title {
+            font-size: 20px;
+        }
+
+        &__item-text {
+            font-size: 16px;
+        }
+
+        &__item:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        &__desc {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+/*-------- Fonts --------*/
+$font-r: "Century Gothic";
+$font-b: "Century Gothic-Bold";
+$font-round: "HessGothicRoundNFW01";
+
+/*-------- Colors --------*/
+$blue: #B6FBFF;
+$green: #67F6C0;
+$black: #0D0D3D;
+
+@import './reset.scss';
+@import './components/components.scss';

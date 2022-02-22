@@ -1,0 +1,100 @@
+/*-------- Banner --------*/
+
+.banner {
+    padding-top: 75px;
+    height: 815px;
+
+    position: relative;
+
+    background-image: url(../../images/banner/bg.svg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    &__title {
+        font-size: 60px;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    &__cloud {
+        position: absolute;
+        mix-blend-mode: screen;
+        opacity: 0.7;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &__cloud--1 {
+        width: 28%;
+        left: -2%;
+        top: 12%;
+    }
+
+    &__cloud--2 {
+        width: 52%;
+        right: -9%;
+        top: 23%;
+    }
+
+    &__image {
+        width: 28%;
+        max-width: 400px;
+    
+        position: relative;
+        left: 1%;
+        z-index: 2;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+
+        max-width: 1452px;
+        margin-left: auto;
+        margin-right: auto;
+
+        position: relative;
+        margin-top: 41px;
+    }
+
+    &__money {
+        width: 33%;
+        max-width: 479px;
+
+        position: absolute;
+        left: 1.5%;
+        bottom: 23%;
+
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+@media (max-width: 989px) {
+
+    .banner {
+
+    }
+}
+
+@media (max-width: 767px) {
+
+    .banner {
+
+    }
+}
+
+@media (max-width: 479px) {
+
+    .banner {
+
+    }
+}

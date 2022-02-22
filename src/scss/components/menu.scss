@@ -1,0 +1,121 @@
+/*-------- Menu --------*/
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        font-family: $font-b;
+        color: $black;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 32px;
+    }
+}
+
+.menu {
+
+    &--header {
+        margin-left: auto;
+    }
+}
+
+.menu {
+
+    &--footer {
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+
+    &--footer &__link {
+        font-size: 20px;
+
+        transition: color 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+}
+
+@media (max-width: 1099px) {
+
+}
+
+@media (max-width: 989px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 619px) {
+
+}
+
+@media (max-width: 479px) {
+
+    .menu {
+
+        &--header {
+            position: absolute;
+            flex-direction: column;
+            top: 100%;
+            border-top: none;
+            height: auto;
+            padding: 0 12px;
+
+            border-bottom: 2px solid $black;
+            z-index: 2;
+
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0 20px 22px 11px rgba(0, 0, 0, 0.3);
+
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        &--header.opened {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &--header &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 40px;
+            width: 100%;
+
+            font-size: 16px;
+        }
+
+        &--header &__item {
+            width: 100%;
+        }
+
+        &--header &__item:not(:first-child) {
+            margin-left: 0;
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    .menu {
+
+        &--footer {
+            flex-wrap: wrap;
+            margin-bottom: -10px;
+        } 
+
+        &--footer &__item {
+            display: flex;
+            justify-content: center;
+
+            width: 33%;
+            margin-bottom: 10px;
+        }
+    }
+}

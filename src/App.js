@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import { useRef } from 'react';
+import addToRefs from './services/addToRefs';
+import Banner from './components/Banner';
+import Footer from './components/Footer';
+import About from './components/About';
+import HowItWorks from './components/HowItWorks';
+import Tokenomics from './components/Tokenomics';
+import Roadmap from './components/Roadmap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const sections = useRef([]);
+
+    return (
+        <>
+            <Header sections={sections} />
+            <main className="main">
+                <Banner refProp={el => addToRefs(el, sections)} />
+                <About refProp={el => addToRefs(el, sections)} />
+                <HowItWorks />
+                <Tokenomics refProp={el => addToRefs(el, sections)} />
+                <Roadmap refProp={el => addToRefs(el, sections)} />
+                {/*
+                <FAQ refProp={el => addToRefs(el, sections)} /> */}
+            </main>
+            <Footer sections={sections} />
+        </>
+    );
 }
-
-export default App;

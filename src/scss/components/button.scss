@@ -1,0 +1,61 @@
+/*-------- Button --------*/
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 56px;
+    padding: 0 20px;
+
+    border-radius: 100px;
+
+    font-family: $font-b;
+    font-size: 16px;
+    color: $black;
+
+    background-color: $green;
+
+    transition: color 0.2s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.button {
+
+    &--header {
+        height: 56px;
+        padding: 0 37px;
+        background-color: #fff;
+        color: $black;
+    }
+
+    &--header:hover {
+        color: $blue;
+    }
+}
+
+@media (max-width: 1099px) {
+
+    .button {
+
+        &--header {
+            height: 50px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .button {
+
+        &--header {
+            height: 40px;
+            padding: 0 15px;
+            font-size: 12px;
+        }
+    }
+}

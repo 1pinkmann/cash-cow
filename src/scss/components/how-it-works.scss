@@ -1,0 +1,100 @@
+/*-------- How-it-works --------*/
+
+.how-it-works {
+    padding-top: 148px;
+    padding-bottom: 168px;
+    margin-top: -70px;
+    background-color: #fff;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 78px;
+    }
+
+    &__image-wrapper {
+        width: 57%;
+        background-color: $blue;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    &__image-wrapper:before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 76%;
+    }
+
+    &__image {
+        position: absolute;
+    }
+
+    &__image--1 {
+        width: 25%;
+        top: -9.6%;
+        left: -6.3%;
+    }
+
+    &__image--2 {
+        width: 32%;
+        left: -10.3%;
+        bottom: -13.6%;
+    }
+
+    &__column {
+        width: 43%;
+        padding-left: 91px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        font-family: $font-b;
+        line-height: 1.5;
+    }
+
+    &__item-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        
+        width: 32px;
+        height: 32px;
+        margin-right: 16px;
+
+        background-color: $black;
+        border-radius: 50%;
+
+        position: relative;
+
+        color: #fff;
+    }
+
+    &__item:not(:first-child):before {
+        content: "";
+
+        width: 1px;
+        height: 24px;
+        margin-left: 16px;
+        margin-bottom: 12px;
+
+        background-color: rgba(127, 143, 158, 0.5);
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 12px;
+    }
+
+    &__button {
+        margin-top: 40px;
+        padding: 0 46px;
+    }
+}

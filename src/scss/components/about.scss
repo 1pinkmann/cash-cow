@@ -1,0 +1,60 @@
+/*-------- About --------*/
+
+.about {
+    padding-top: 312px;
+    padding-bottom: 154px;
+    margin-top: -13%;
+    position: relative;
+
+    background-image: url(../../images/about/bg.svg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__title {
+        text-align: left;
+    }
+
+    &__wrapper {
+        display: flex;  
+        align-items: center;
+        z-index: 1;
+        position: relative;
+    }
+
+    &__column {
+        width: 40%;
+    }
+
+    &__image {
+        width: 60%;
+        padding-left: 202px;
+    }
+
+    &__text {
+        margin-top: 48px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 989px) {
+
+    .about {
+
+    }
+}
+
+@media (max-width: 767px) {
+
+    .about {
+
+    }
+}
+
+@media (max-width: 479px) {
+
+    .about {
+
+    }
+}

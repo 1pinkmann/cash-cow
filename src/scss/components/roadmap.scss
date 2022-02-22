@@ -1,0 +1,164 @@
+/*-------- Roadmap --------*/
+
+.roadmap {
+    padding-top: 130px;
+    padding-bottom: 140px;
+    background-color: #fff;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        max-width: 759px;
+    }
+
+    &__list {
+        width: 100%;
+        margin-top: 72px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__item:before {
+        content: "";
+        width: 1px;
+        height: 100%;
+
+        background-color: rgba(13, 13, 61, 0.1);
+        position: absolute;
+        top: 0;
+    }
+
+    &__item:after {
+        content: "";
+
+        width: 9px;
+        height: 9px;
+
+        background: #FFFFFF;
+        border: 3px solid $black;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &__item--active:after {
+        border-color: $green;
+        background-color: $green;
+    }
+
+    &__item:last-child:before {
+        content: none;
+    }
+
+    &__item:not(:last-child) {
+        padding-bottom: 70px;
+    }
+
+    &__column {
+        display: flex;
+        width: 50%;
+    }
+
+    &__column--1 {
+        padding-right: 47px;
+    }
+
+    &__column--2 {
+        padding-left: 47px;
+    }
+
+    &__item:nth-child(even) &__column--1 {
+        justify-content: flex-end;
+    }
+
+    &__title {
+        padding: 14px 25px;
+
+        border: 1px dashed #0D0D3D;
+        border-radius: 100px;
+
+        font-family: $font-b;
+        font-size: 20px;
+        opacity: 0.3;
+    }
+
+    &__item--active &__title {
+        background-color: $green;
+        border: none;
+        opacity: 1;
+    }
+
+    &__item-list {
+        padding: 24px;
+        background: #FFFFFF;
+        box-shadow: 0px 12px 26px rgba(30, 33, 85, 0.08);
+        border-radius: 16px;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    &__list-item:before {
+        content: "";
+        width: 4px;
+        height: 4px;
+
+        margin-right: 10px;
+        background-color: currentColor;
+        border-radius: 50%;
+    }
+
+    &__item--active &__item-list {
+        background-color: #0c0d3d;
+    }
+
+    &__item--active &__list-item {
+        color: #fff;
+    }
+
+    &__button {
+        margin-top: 60px;
+        padding: 0 46px;
+    }
+}
+
+@media (max-width: 1099px) {
+
+    .roadmap {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .roadmap {
+
+        &__cards-list {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .roadmap {
+
+        &__wrapper {
+            background-size: cover;
+        }
+    }
+}

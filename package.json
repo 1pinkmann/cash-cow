@@ -13,6 +13,7 @@
     "react-scripts": "5.0.0",
     "react-tooltip": "^4.2.21",
     "sass": "^1.49.8",
+    "smoothscroll-polyfill": "^0.4.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

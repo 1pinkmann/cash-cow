@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import addToRefs from './services/addToRefs';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
@@ -10,8 +10,14 @@ import Roadmap from './components/Roadmap';
 import Team from './components/Team';
 import FAQ from './components/FAQ';
 
+import smoothscroll from 'smoothscroll-polyfill';
+
 export default function App() {
     const sections = useRef([]);
+
+    useEffect(() => {
+        smoothscroll.polyfill();
+    }, []);
 
     return (
         <>

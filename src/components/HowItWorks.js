@@ -1,9 +1,9 @@
 import sun from "../images/how-it-works/sun.svg";
 import cloud from "../images/how-it-works/cloud.svg";
 
-export default function HowItWorks() {
+export default function HowItWorks({ refProp }) {
     return (
-        <div className="how-it-works">
+        <div className="how-it-works" ref={refProp}>
             <h1 className="title how-it-works__title container">How it Works</h1>
             <div className="how-it-works__wrapper container">
                 <div className="how-it-works__image-wrapper">

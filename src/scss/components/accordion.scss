@@ -2,34 +2,49 @@
 
 .accordion {
 
-    &__item {
-        border-bottom: 2px solid $black;
+    &__item:not(:first-child) {
+        margin-top: 16px;
     }
 
     &__wrapper {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        border-radius: 16px;
+
+        background-color: #fff;
+        transition: background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &__wrapper.active {
+        background-color: $blue;
     }
 
     &__button {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 100px;
+        height: 88px;
+
+        padding-left: 26px;
+        padding-right: 35px;
 
         font-family: $font-b;
-        font-size: 24px;
+        font-size: 20px;
         color: $black;
         text-align: left;
-    }
 
-    &__button.active {
-        ;
+        border-radius: 16px;
+
+        transition: border-radius 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     &__button:hover &__pm {
         transform: rotateZ(-180deg);
+    }
+
+    &__button.active {
+        background-color: transparent;
     }
 
     &__pm {
@@ -41,9 +56,6 @@
         width: 30px;
         height: 30px;
         margin-left: 20px;
-
-        border: 2px solid $black;
-        border-radius: 50%;
 
         color: $black;
 
@@ -71,9 +83,6 @@
     }
 
     &__button.active &__pm {
-        
-        
-        color: #ffffff;
         transform: rotateZ(-180deg);
     }
 
@@ -83,25 +92,29 @@
 
     &__content {
         overflow: hidden;
-        transition: height 0.3s ease-out;
+        transition: height 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     &__text {
-        line-height: 1.4;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     &__text-wrapper {
-        padding-bottom: 32px;
+        padding: 0 26px 26px 26px;
+        transition: background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 767px) {
 
     .accordion {
 
         &__button {
-            height: 80px;
-            font-size: 20px;
+            height: 65px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 16px;
         }
     }
 }
@@ -109,10 +122,27 @@
 @media (max-width: 479px) {
 
     .accordion {
+
+        &__item:not(:first-child) {
+            margin-top: 10px;
+        }
         
         &__button {
-            height: 75px;
-            font-size: 18px;
+            height: 55px;
+            padding-left: 18px;
+            padding-right: 18px;
+            font-size: 14px;
+        }
+
+        &__pm {
+            width: 25px;
+            height: 25px;
+            margin-left: 12px;
+        }
+
+        &__text {
+            font-size: 12px;
+            line-height: 1.3;
         }
     }
 }

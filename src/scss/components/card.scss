@@ -2,70 +2,115 @@
 
 .cards-list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .cards-list {
 
-    &--roadmap {
-        justify-content: space-between;
+    &--team {
+        margin-top: 63px;
+        padding: 0 150px;
+        padding-top: 2%;
+        position: relative;
     }
 
-    &--roadmap &__item {
-        width: calc(25% - 14px);
+    &--team:before {
+        content: "";
+        width: 100%;
+        height: 20%;
+
+        background-image: url(../../images/team/rope.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &--team &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: calc(25% - 87px);
+        max-width: 237px;
+    }
+
+    &--team &__item:nth-child(1) {
+        transform: rotateZ(10deg);
+    }
+
+    &--team &__item:nth-child(2) {
+        transform: rotateZ(352deg) translateY(9%) translateX(9%);
+    }
+
+    &--team &__item:nth-child(3) {
+        transform: rotateZ(3deg) translateY(6%) translateX(7%);
+    }
+
+    &--team &__item:nth-child(4) {
+        transform: rotateZ(357deg) translateY(3%) translateX(6%);
+    }
+
+    &--team &__item:before {   
+        content: "";
+        width: 22px;
+        height: 6.8vw;
+        margin-bottom: -32px;
+
+        background: #C49A6C;
+        z-index: 2;
     }
 }
 
 .card {
 
-    &--roadmap {
-        height: 100%;
-        padding: 8px;
-
-        border-radius: 24px;
-        border: 2px solid #000000;
-    }
-
-    &--roadmap &__wrapper {
-        height: 100%;
-        padding: 40px 16px;
-
-        background: #F9EDCA;
+    &--team {
+        width: 100%;
+        padding: 14px;
+        background-color: #fff;
         border-radius: 16px;
-        border: inherit;
     }
 
-    &--roadmap &__title {
-        font-size: 26px;
+    &--team &__image-wrapper {
+        position: relative;
+        border: 4px solid #231F20;
     }
 
-    &--roadmap &__list {
-        margin-top: 20px;
+    &--team &__image-wrapper:before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 117%;
     }
 
-    &--roadmap &__list-item {   
-        display: flex;
+    &--team &__title {
+        margin-top: 16px;
+        font-family: $font-b;
         font-size: 16px;
-        line-height: 1.5;
     }
 
-    &--roadmap &__list-item:before {
-        content: "·";
-
-        margin-right: 10px;
-
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: 900;
+    &--team &__text {
+        margin-top: 6px;
+        font-size: 14px;
+        opacity: 0.5;
     }
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1219px) {
 
-    .card {
+    .cards-list {
 
-        &--roadmap &__wrapper {
-            padding: 20px 16px;
+        &--team {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        &--team &__item {
+            width: calc(25% - 60px);
         }
     }
 }
@@ -74,19 +119,63 @@
 
     .cards-list {
 
-        &--roadmap {
-            overflow: auto;
-            flex-wrap: nowrap;
-            padding-bottom: 20px;
+        &--team {
+            margin-top: 30px;
+            padding-top: 4%;
+            padding-left: 30px;
+            padding-right: 30px;
         }
 
-        &--roadmap &__item {
-            width: 276px;
-            flex-shrink: 0;
+        &--team &__item {
+            width: calc(25% - 26px);
         }
 
-        &--roadmap &__item:not(:first-child) {
-            margin-left: 20px;
+        &--team &__item:nth-child(1) {
+            transform: rotateZ(3deg);
+        }
+
+        &--team &__item:nth-child(2) {
+            transform: rotateZ(360deg) translateY(4%) translateX(9%);
+        }
+
+        &--team &__item:nth-child(3) {
+            transform: rotateZ(357deg) translateY(4%) translateX(7%);
+        }
+
+        &--team &__item:nth-child(4) {
+            transform: rotateZ(357deg) translateY(1%) translateX(6%);
+        }
+
+        &--team &__item:before {
+            margin-bottom: -24px;
+        }
+    }
+}
+
+@media (max-width: 989px) and (min-width: 619px) {
+
+    .card {
+
+        &--team {
+            padding: 10px;
+        }
+
+        &--team &__title {
+            font-size: 14px;
+        }
+
+        &--team &__text {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .cards-list {
+
+        &--team &__item:before {
+            height: 9.8vw;
         }
     }
 }
@@ -95,12 +184,57 @@
 
     .cards-list {
 
-        &--roadmap {
-            padding-top: 20px;
+        &--team {
+            padding-top: 10%;
+            padding-left: 12px;
+            padding-right: 12px;
+            justify-content: space-around;
         }
 
-        &--roadmap &__item:not(:first-child) {
-            margin-left: 10px;
+        &--team &__item {
+            width: calc(50% - 30px);
+        }
+
+        &--team &__item:nth-child(n) {
+            transform: unset;
+        }
+
+        &--team &__item:before {
+            height: 14.8vw;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .cards-list {
+
+        &--team {
+            justify-content: space-between;
+        }
+
+        &--team &__item {
+            width: calc(50% - 8px);
+        }
+
+        &--team &__item:before {
+            height: 22.8vw;
+            margin-bottom: -32px;
+        }
+    }
+
+    .card {
+
+        &--team {
+            padding: 10px;
+        }
+
+        &--team &__title {
+            font-size: 14px;
+        }
+
+        &--team &__text {
+            font-size: 12px;
         }
     }
 }

@@ -1,0 +1,41 @@
+/*-------- Team --------*/
+
+.team {
+    padding-top: 120px;
+    padding-bottom: 268px;
+
+    background-image: url(../../images/team/bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__image {
+        min-width: 100%;
+    }
+
+    &__image-wrapper {
+        margin-top: 82px;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 1219px) {
+
+    .team {
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 619px) {
+
+    .team {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 479px) {
+
+    .team {
+        padding: 50px 0;
+    }
+}

@@ -37,24 +37,25 @@
     }
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 989px) {
 
     .button {
 
         &--header {
-            height: 50px;
+            height: 45px;
+            padding: 0 30px;
             font-size: 14px;
         }
     }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 359px) {
 
     .button {
 
         &--header {
             height: 40px;
-            padding: 0 15px;
+            padding: 0 20px;
             font-size: 12px;
         }
     }

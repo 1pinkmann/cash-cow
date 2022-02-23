@@ -3,24 +3,24 @@ import Accordion from './common/Accordion/Accordion';
 
 const questions = [
     {
-        title: "How do I purchase $GAINZ tokens?",
-        text: "We are a team of more than 15 experienced and highly skilled individuals determined to take $GAINZ to the moon! We are in the process of KYC-ing in order to be as transparent and trustworthy as possible to our investors."
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quisurus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
     },
     {
-        title: "Who are the team? How can we trust them?",
-        text: "We are a team of more than 15 experienced and highly skilled individuals determined to take $GAINZ to the moon! We are in the process of KYC-ing in order to be as transparent and trustworthy as possible to our investors."
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quisurus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
     },
     {
-        title: "Is liquidity going to be locked?",
-        text: "We are a team of more than 15 experienced and highly skilled individuals determined to take $GAINZ to the moon! We are in the process of KYC-ing in order to be as transparent and trustworthy as possible to our investors."
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quisurus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
     },
     {
-        title: "Is the token audited?",
-        text: "We are a team of more than 15 experienced and highly skilled individuals determined to take $GAINZ to the moon! We are in the process of KYC-ing in order to be as transparent and trustworthy as possible to our investors."
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quisurus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
     },
     {
-        title: "What are your tokenomics?",
-        text: "We are a team of more than 15 experienced and highly skilled individuals determined to take $GAINZ to the moon! We are in the process of KYC-ing in order to be as transparent and trustworthy as possible to our investors."
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quisurus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
     }
 ];
 
@@ -28,7 +28,7 @@ export default function FAQ({ refProp }) {
 
     return (
         <div className="faq container" ref={refProp}>
-            <h1 className="title faq__title">Frequently Asked Questions</h1>
+            <h1 className="title faq__title">Frequently asked questions</h1>
             <Accordion className="faq__accordion" list={questions} />
         </div>
     )

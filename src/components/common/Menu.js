@@ -7,7 +7,7 @@ export default function Menu({ className, opened, sections, menuCallback }) {
     function handleScrollDown(el) {
         const position = el.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({ top: position, behavior: 'smooth' });
-        menuCallback();
+        menuCallback && menuCallback();
     }
 
     useEffect(() => {
@@ -27,22 +27,22 @@ export default function Menu({ className, opened, sections, menuCallback }) {
     return (
         <ul className={"menu " + (className ? className : "") + (opened || "")} ref={menu}>
             <li className="menu__item">
-                <button className="menu__link" onClick={() => handleScrollDown(sections.current[1])}>Home</button>
+                <button className="menu__link" onClick={() => handleScrollDown(sections.current[0])}>Home</button>
             </li>
             <li className="menu__item">
-                <button className="menu__link" onClick={() => handleScrollDown(sections.current[3])}>Overview</button>
+                <button className="menu__link" onClick={() => handleScrollDown(sections.current[1])}>Overview</button>
             </li>
             <li className="menu__item">
-                <button className="menu__link" onClick={() => handleScrollDown(sections.current[5])}>How it Works</button>
+                <button className="menu__link" onClick={() => handleScrollDown(sections.current[2])}>How it Works</button>
             </li>
             <li className="menu__item">
-                <button className="menu__link" onClick={() => handleScrollDown(sections.current[2])}>Tokenomics</button>
+                <button className="menu__link" onClick={() => handleScrollDown(sections.current[3])}>Tokenomics</button>
             </li>
             <li className="menu__item">
                 <button className="menu__link" onClick={() => handleScrollDown(sections.current[4])}>Roadmap</button>
             </li>
             <li className="menu__item">
-                <button className="menu__link" onClick={() => handleScrollDown(sections.current[6])}>FAQ</button>
+                <button className="menu__link" onClick={() => handleScrollDown(sections.current[5])}>FAQ</button>
             </li>
         </ul>
     );

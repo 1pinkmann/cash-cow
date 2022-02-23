@@ -1,25 +1,26 @@
 /*-------- FAQ --------*/
 
 .faq {
-    padding-bottom: 120px;
+    padding-top: 150px;
+    padding-bottom: 80px;
 
     &__title {
-        text-align: center;
+        color: #fff;
     }
 
     &__accordion {
-        max-width: 760px;
+        max-width: 840px;
 
-        margin-top: 72px;
+        margin-top: 60px;
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 767px) {
 
     .faq {
-        padding-bottom: 80px;
+        padding-top: 80px;
 
         &__accordion {
             margin-top: 40px;
@@ -30,10 +31,11 @@
 @media (max-width: 479px) {
 
     .faq {
-        padding-bottom: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
-        &__accordion {
-            margin-top: 30px;
+        &__title {
+            font-size: 24px;
         }
     }
 }

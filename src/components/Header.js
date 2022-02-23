@@ -11,7 +11,7 @@ export default function Header({ sections }) {
                 <a href="/" className="logo header__logo">
                     <img src={logo} className="logo__icon" alt="logo" />
                 </a>
-                <Menu className="menu--header" sections={sections} />
+                <Menu className={"menu--header" + (menuOpened ? " opened" : "")} sections={sections} menuCallback={() => setMenuOpened(false)} />
                 <a href="/" className="button button--header header__button">Whitepaper</a>
                 <button className={"header__mobile-button" + (menuOpened ? " opened" : "")} onClick={() => setMenuOpened(!menuOpened)}><span></span></button>
             </div>

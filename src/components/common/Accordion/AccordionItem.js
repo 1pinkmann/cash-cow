@@ -15,7 +15,7 @@ export default function AccordionItem({ item, index, list }) {
 
     return (
         <li className="accordion__item">
-            <div className="accordion__wrapper">
+            <div className={"accordion__wrapper" + (contentHeight[index] > 0 ? " active" : "")}>
                 <button className={"accordion__button" + (contentHeight[index] > 0 ? " active" : "")} onClick={() => toggleContent(index)}>
                     <span>{item.title}</span>
                     <span className="accordion__pm"></span>

@@ -1,9 +1,15 @@
 import Twitter from './../../Icons/Twitter';
-import Telegram from './../../Icons/Telegram';
+import Facebook from './../../Icons/Facebook';
+import Instagram from './../../Icons/Instagram';
 
 export default function Social({ className }) {
     return (
         <ul className={"social " + (className ? className : "")}>
+            <li className="social__item">
+                <a href="/" className="social__link">
+                    <Facebook className="social__icon" />
+                </a>
+            </li>
             <li className="social__item">
                 <a href="/" className="social__link">
                     <Twitter className="social__icon" />
@@ -11,7 +17,7 @@ export default function Social({ className }) {
             </li>
             <li className="social__item">
                 <a href="/" className="social__link">
-                    <Telegram className="social__icon" />
+                    <Instagram className="social__icon" />
                 </a>
             </li>
         </ul>

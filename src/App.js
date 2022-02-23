@@ -7,6 +7,8 @@ import About from './components/About';
 import HowItWorks from './components/HowItWorks';
 import Tokenomics from './components/Tokenomics';
 import Roadmap from './components/Roadmap';
+import Team from './components/Team';
+import FAQ from './components/FAQ';
 
 export default function App() {
     const sections = useRef([]);
@@ -17,13 +19,15 @@ export default function App() {
             <main className="main">
                 <Banner refProp={el => addToRefs(el, sections)} />
                 <About refProp={el => addToRefs(el, sections)} />
-                <HowItWorks />
+                <HowItWorks refProp={el => addToRefs(el, sections)} />
                 <Tokenomics refProp={el => addToRefs(el, sections)} />
                 <Roadmap refProp={el => addToRefs(el, sections)} />
-                {/*
-                <FAQ refProp={el => addToRefs(el, sections)} /> */}
+                <Team />
+                <section className="section section--bottom">
+                    <FAQ refProp={el => addToRefs(el, sections)} />
+                    <Footer sections={sections} />
+                </section>
             </main>
-            <Footer sections={sections} />
         </>
     );
 }

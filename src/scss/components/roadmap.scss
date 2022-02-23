@@ -55,7 +55,7 @@
     }
 
     &__item:last-child:before {
-        content: none;
+        display: none;
     }
 
     &__item:not(:last-child) {
@@ -100,7 +100,11 @@
         padding: 24px;
         background: #FFFFFF;
         box-shadow: 0px 12px 26px rgba(30, 33, 85, 0.08);
-        border-radius: 16px;
+        border-radius: 16px 0 16px 16px;
+    }
+
+    &__item:nth-child(even) &__item-list {
+        border-radius: 0 16px 16px 16px;
     }
 
     &__list-item {
@@ -135,30 +139,85 @@
     }
 }
 
-@media (max-width: 1099px) {
-
-    .roadmap {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-}
-
-@media (max-width: 767px) {
-
-    .roadmap {
-
-        &__cards-list {
-            margin-top: 30px;
-        }
-    }
-}
 
 @media (max-width: 619px) {
 
     .roadmap {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        &__list {
+            margin-top: 50px;
+        }
 
         &__wrapper {
-            background-size: cover;
+            max-width: 360px;
+        }
+
+        &__item {
+            flex-direction: column-reverse
+        }
+
+        &__item:before {
+            left: 7px;
+        }
+
+        &__item:after {
+            left: 0;
+        }
+
+        &__column {
+            width: 81%;
+            padding: 0;
+        }
+
+        &__column--1 {
+            margin-top: 20px;
+        }
+
+        &__title {
+            border-radius: 0 100px 100px 0 !important;
+        }
+
+        &__item-list {
+            border-radius: 0 16px 16px 0 !important;
+        }
+
+        &__item:not(:last-child) {
+            padding-bottom: 50px;
+        }
+
+        &__item:nth-child(even) {
+            flex-direction: column;
+        }
+
+        &__item:nth-child(even) &__column--1 {
+            justify-content: flex-start;
+        }
+
+        &__item:nth-child(even) &__column--1 {
+            margin-top: 0;
+        }
+
+        &__item:nth-child(even) &__column--2 {
+            margin-top: 20px;
+        }
+
+        &__item:last-child:before {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .roadmap {
+
+        &__button {
+            margin-top: 40px;
+            padding: 0 30px;
+            font-size: 14px;
+            height: 45px;
         }
     }
 }

@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 320px;
 
@@ -71,6 +75,31 @@ input[type="number"] {
     }
 }
 
+.section {
+
+    &--bottom {
+        margin-top: -63px;
+
+        background-image: url(../../images/bottom.svg);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.__react_component_tooltip {
+    border-radius: 12px !important;
+}
+
+.tooltip {
+    font-family: $font-b;
+    font-size: 14px;
+    color: $green;
+    text-align: center;
+
+    border-radius: 12px;
+}
+
 @media (max-width: 767px) {
 
     body {
@@ -78,9 +107,30 @@ input[type="number"] {
     }
 }
 
+@media (max-width: 619px) {
+
+    .section {
+
+        &--bottom {
+            margin-top: -29px;
+        }
+    }
+}
+
 @media (max-width: 479px) {
+
+    body {
+        font-size: 14px;
+    }
 
     .container {
         padding: 0 12px;
+    }
+
+    .section {
+
+        &--bottom {
+            margin-top: -16px;
+        }
     }
 }

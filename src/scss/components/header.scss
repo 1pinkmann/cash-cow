@@ -76,59 +76,25 @@
     }
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 989px) {
 
     .header {
-        
-        &__logo {
-            width: 14%;
-        }
+        position: relative;
 
         &__wrapper {
             height: 70px;
         }
-    }
-}
-
-@media (max-width: 989px) {
-
-    .header {
 
         &__logo {
-            width: 155px;
+            width: 135px;
         }
-    }
-}
-
-@media (max-width: 619px) {
-
-    .header {
-
-        &__wrapper {
-            height: 60px;
-        }
-
-        &__logo {
-            width: 120px;
-        }
-
-        &__button {
-            margin-left: 20px;
-        }
-    }
-}
-
-@media (max-width: 479px) {
-
-    .header {
-        position: relative;
 
         &__mobile-button {
             display: flex;
         }
 
         &__button {
-            margin-left: 0;
+            margin-left: auto;
         }
     }
 }
@@ -137,8 +103,12 @@
 
     .header {
 
+        &__wrapper {
+            height: 65px;
+        }
+
         &__logo {
-            width: 100px;
+            width: 110px;
         }
     }
 }
